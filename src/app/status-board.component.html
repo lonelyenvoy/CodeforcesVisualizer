@@ -1,0 +1,18 @@
+<div class="wrapper-component">
+  <button class="btn btn-default" (click)="test($event)">test!</button>
+  <div class="wrapper-table">
+    <div class="board-header">
+      <div class="grid" *ngFor="let title of header; let i = index"
+           [style.grid-column-start]="i*2+1" [style.grid-column-end]="i*2+2">
+        {{ title }}
+      </div>
+    </div>
+    <div class="board-row" *ngFor="let submission of submissions; let i = index">
+      <div class="grid" *ngFor="let key of getKeys(submission); let j = index"
+           [style.grid-row-start]="i*2+1" [style.grid-row-end]="i*2+2"
+           [style.grid-column-start]="j*2+1" [style.grid-column-end]="j*2+2">
+        {{ submission[key] }}
+      </div>
+    </div>
+  </div>
+</div>

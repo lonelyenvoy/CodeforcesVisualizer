@@ -1,0 +1,19 @@
+.wrapper-component {
+  margin: 20px;
+}
+
+.board-header, .board-row {
+  margin: 10px;
+  display: grid;
+  grid-template-columns:
+    80px 10px 90px 10px 50px 2px 14px 10px
+    250px 10px 200px 10px 100px 10px 70px 10px
+    80px 10px 40px 10px 250px 10px 130px;
+}
+
+.grid {
+  /*background-color: #f9f9f9;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
